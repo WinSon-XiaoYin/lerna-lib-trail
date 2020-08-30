@@ -1,0 +1,92 @@
+Arguments: 
+  C:\Program Files\nodejs\node.exe C:\Users\zhong\AppData\Roaming\npm\node_modules\yarn\bin\yarn.js add c:\Users\zhong\workspace\mfe-common-lib\packages\http
+
+PATH: 
+  C:\Python27\;C:\Python27\Scripts;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\ProgramData\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files\Git\cmd;C:\Program Files\Java\jdk1.8.0_131\bin;C:\Users\zhong\Documents\mysql\bin;C:\Program Files\JetBrains\IntelliJ IDEA 2017.2\plugins\maven\lib\maven3\bin;C:\Users\zhong\Documents\curl-7.53.1\src;C:\WINDOWS\System32\OpenSSH\;C:\Users\zhong\AppData\Roaming\nvm;C:\Program Files\nodejs;C:\Program Files\MongoDB\Server\3.6\bin;C:\protobuf\bin;C:\Program Files\cmder;C:\Users\zhong\go\bin;C:\Program Files\Java\jdk-10.0.2\bin;C:\Users\zhong\Documents\apache-ant-1.10.5\bin;C:\Program Files (x86)\Google\Chrome\Application;C:\Program Files\nodejs\;C:\ProgramData\chocolatey\bin;C:\Go\bin;C:\Users\zhong\AppData\Local\Programs\Python\Python36\Scripts\;C:\Users\zhong\AppData\Local\Programs\Python\Python36\;C:\Users\zhong\AppData\Local\Microsoft\WindowsApps;C:\Users\zhong\AppData\Roaming\nvm;C:\Program Files\nodejs;C:\Program Files\gettext-iconv\bin;C:\Users\zhong\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\zhong\AppData\Roaming\nvm;C:\Program Files\nodejs;C:\Users\zhong\AppData\Roaming\npm;C:\Users\zhong\AppData\Local\Microsoft\WindowsApps;C:\Users\zhong\go\bin
+
+Yarn version: 
+  1.22.4
+
+Node version: 
+  12.8.0
+
+Platform: 
+  win32 x64
+
+Trace: 
+  Error: https://registry.npm.taobao.org/@mfe-common%2fhttp: Not found
+      at Request.params.callback [as _callback] (C:\Users\zhong\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:66987:18)
+      at Request.self.callback (C:\Users\zhong\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:140748:22)
+      at Request.emit (events.js:203:13)
+      at Request.<anonymous> (C:\Users\zhong\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:141720:10)
+      at Request.emit (events.js:203:13)
+      at IncomingMessage.<anonymous> (C:\Users\zhong\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:141642:12)
+      at Object.onceWrapper (events.js:291:20)
+      at IncomingMessage.emit (events.js:208:15)
+      at endReadableNT (_stream_readable.js:1168:12)
+      at processTicksAndRejections (internal/process/task_queues.js:77:11)
+
+npm manifest: 
+  {
+    "name": "@mfe-common/auth",
+    "version": "0.0.1",
+    "description": "Saga middleware for Redux to handle Side Effects",
+    "main": "./dist/mfe-common-auth.cjs.js",
+    "module": "./dist/mfe-common-auth.esm.js",
+    "files": [
+      "dist"
+    ],
+    "scripts": {
+      "test": "yarn test:types && yarn test:jest",
+      "test:jest": "jest",
+      "clean": "rimraf dist",
+      "prebuild": "yarn clean",
+      "build": "rollup -c",
+      "prepare": "yarn build",
+      "preversion": "npm test"
+    },
+    "license": "MIT",
+    "dependencies": {
+      "@babel/runtime": "^7.6.3",
+      "@mfe-common/http": "^0.0.1",
+      "typescript-tuple": "^2.2.1"
+    },
+    "devDependencies": {
+      "@babel/core": "^7.6.4",
+      "@babel/plugin-transform-runtime": "^7.6.2",
+      "@babel/polyfill": "^7.6.0",
+      "@babel/preset-env": "^7.6.3",
+      "babel-7-jest": "^21.3.3",
+      "babel-plugin-annotate-pure-calls": "^0.4.0",
+      "dtslint": "^0.9.0",
+      "jest": "^23.5.0",
+      "lerna-alias": "^3.0.2",
+      "mitt": "^1.1.2",
+      "rimraf": "^3.0.0",
+      "rollup": "^1.23.1",
+      "rollup-plugin-alias": "^1.4.0",
+      "rollup-plugin-babel": "5.0.0-alpha.0",
+      "rollup-plugin-node-resolve": "^4.0.0",
+      "rollup-plugin-replace": "^1.1.1",
+      "typescript": "^3.6.4"
+    },
+    "types": "./index.d.ts",
+    "typesVersions": {
+      ">=3.6": {
+        "*": [
+          "./types/ts3.6/*"
+        ]
+      },
+      ">=3.2": {
+        "*": [
+          "./types/*"
+        ]
+      }
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile

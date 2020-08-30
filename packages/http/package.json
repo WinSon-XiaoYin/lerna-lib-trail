@@ -1,0 +1,47 @@
+{
+  "name": "@mfe-common/http",
+  "version": "0.0.1",
+  "description": "Saga middleware for Redux to handle Side Effects",
+  "main": "./dist/mfe-common-http.cjs.js",
+  "module": "./dist/mfe-common-http.esm.js",
+  "typings": "./index.d.ts",
+  "files": [
+    "dist",
+    "*.d.ts"
+  ],
+  "scripts": {
+    "test": "yarn test:types && yarn test:jest",
+    "test:jest": "jest",
+    "clean": "rimraf dist",
+    "prebuild": "yarn clean",
+    "build": "rollup -c",
+    "prepare": "yarn build",
+    "preversion": "npm test"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "@babel/runtime": "^7.6.3",
+    "is-retry-allowed": "^1.2.0",
+    "typescript-tuple": "^2.2.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.6.4",
+    "@babel/plugin-transform-runtime": "^7.6.2",
+    "@babel/polyfill": "^7.6.0",
+    "@babel/preset-env": "^7.6.3",
+    "babel-7-jest": "^21.3.3",
+    "babel-plugin-annotate-pure-calls": "^0.4.0",
+    "axios": "^0.20.0",
+    "dtslint": "^0.9.0",
+    "jest": "^23.5.0",
+    "lerna-alias": "^3.0.2",
+    "mitt": "^1.1.2",
+    "rimraf": "^3.0.0",
+    "rollup": "^1.23.1",
+    "rollup-plugin-alias": "^1.4.0",
+    "rollup-plugin-babel": "5.0.0-alpha.0",
+    "rollup-plugin-node-resolve": "^4.0.0",
+    "rollup-plugin-replace": "^1.1.1",
+    "typescript": "^3.6.4"
+  }
+}
